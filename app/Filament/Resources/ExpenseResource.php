@@ -77,6 +77,7 @@ class ExpenseResource extends Resource
                     ->form([
                         Forms\Components\Select::make('supplier_id')
                             ->relationship('supplier','name')
+                            ->saveRelationshipsUsing(null)
                             ->required(),
                         Forms\Components\TextInput::make('expense_ref')
                             ->maxLength(32)
